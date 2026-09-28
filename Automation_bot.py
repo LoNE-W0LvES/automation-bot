@@ -21,7 +21,8 @@ from PySide6.QtWidgets import (
     QListWidget, QListWidgetItem, QCheckBox, QMessageBox,
     QTabWidget, QComboBox, QScrollArea, QFrame, QSizePolicy,
     QLineEdit, QSlider, QRadioButton, QButtonGroup, QColorDialog,
-    QInputDialog, QFormLayout, QGridLayout, QStackedWidget
+    QInputDialog, QFormLayout, QGridLayout, QStackedWidget,
+    QFileDialog
 )
 from PySide6.QtCore import Qt, Signal, QObject, QThread, QRect, QTimer, QPoint
 from PySide6.QtGui import (
@@ -33,6 +34,11 @@ try:
     from PIL import Image, ImageDraw, ImageGrab, ImageEnhance
 except ImportError:
     pass
+
+try:
+    import pytesseract
+except ImportError:
+    pytesseract = None
 
 try:
     import keyboard as _kb
@@ -59,13 +65,13 @@ from core import (
     _mkbtn, _sep, _sep_v, _section_lbl, _section_lbl_small,
     DEFAULT_BTN, DEFAULT_CTRL,
     capture, capture_sct,
-    enhance_ocr, ocr_find_text, ocr_read_number,
+    _apply_ocr_channel, enhance_ocr, ocr_find_text, ocr_read_number,
     pixel_match, color_match, image_match, _detect_highlight, detect_button,
     OCR_CHANNELS, OCR_DEFAULT_PASSES,
     MSS_OK, PIL_OK, OCR_OK, CV2_OK,
     MacroRecorder, MacroPlayer,
     ScriptEngine,
-    RegionSelector, RegionHighlighter, RegionEditBar,
+    RegionSelector, RegionHighlighter, PersistentHighlight, RegionEditBar,
     PixelPickerDlg, ScreenColorPicker, ColorPickerDlg,
     ButtonDefDialog, ControlDefDialog, PythonHighlighter, PopupPreview
 )
@@ -2375,10 +2381,6 @@ class MainWindow(QMainWindow):
         except Exception:
             pass
         e.accept()
-
-
-# PersistentHighlight = RegionHighlighter (merged — same class now)
-PersistentHighlight = RegionHighlighter
 
 
 # ═══════════════════════════════════════════════════════════════════════════════

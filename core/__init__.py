@@ -13,7 +13,7 @@ from .models import (
 
 from .vision import (
     capture, capture_sct,
-    enhance_ocr, ocr_find_text, ocr_read_number,
+    _apply_ocr_channel, enhance_ocr, ocr_find_text, ocr_read_number,
     pixel_match, color_match, image_match, _detect_highlight, detect_button,
     OCR_CHANNELS, OCR_DEFAULT_PASSES,
     MSS_OK, PIL_OK, OCR_OK, CV2_OK
@@ -28,7 +28,7 @@ from .engine import (
 )
 
 from .dialogs import (
-    RegionSelector, RegionHighlighter, RegionEditBar,
+    RegionSelector, RegionHighlighter, PersistentHighlight, RegionEditBar,
     PixelPickerDlg, ScreenColorPicker, ColorPickerDlg,
     ButtonDefDialog, ControlDefDialog, PythonHighlighter, PopupPreview
 )

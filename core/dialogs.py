@@ -370,8 +370,8 @@ class RegionHighlighter(QWidget):
             self.show()
         self.update()
         # Bar visibility is not controlled here — it's always shown when a region is open.
-        # The bar's lock button controls editable state, not the other way round.
-
+# Alias for backward compatibility
+PersistentHighlight = RegionHighlighter
 
 # ── Floating edit toolbar shown alongside an editable RegionHighlighter ───────
 
