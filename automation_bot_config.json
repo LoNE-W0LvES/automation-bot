@@ -1,0 +1,19 @@
+{
+  "btn_defs": [],
+  "ctrl_defs": [],
+  "game_region": null,
+  "scripts": [
+    {
+      "name": "script_1",
+      "code": "# Script 1\nwhile True:\n    buttons.scan()\n    sleep(0.5)\n"
+    }
+  ],
+  "macros": [],
+  "hotkeys": {
+    "stop_all_scripts": "",
+    "rec_start": "",
+    "rec_stop": "",
+    "play_macro": "",
+    "stop_macro": ""
+  }
+}

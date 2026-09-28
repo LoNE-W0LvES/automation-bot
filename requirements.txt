@@ -1,0 +1,42 @@
+# ═══════════════════════════════════════════════════════════════════
+#  Automation Bot  —  requirements.txt
+#  Covers: Automation_bot.py
+#
+#  Install:  pip install -r requirements.txt
+#
+#  ⚠ Windows only (win32api, interception driver, Tesseract-OCR)
+#  ⚠ Run pip as Administrator if using interception-python
+# ═══════════════════════════════════════════════════════════════════
+
+# ── GUI framework ────────────────────────────────────────────────
+PySide6>=6.5.0
+
+# ── Screen capture ───────────────────────────────────────────────
+mss>=9.0.1
+
+# ── Image processing & Vision ────────────────────────────────────
+Pillow>=10.0.0
+numpy>=1.24.0
+opencv-python>=4.8.0
+
+# ── OCR ──────────────────────────────────────────────────────────
+pytesseract>=0.3.10
+# ⚠ Also requires Tesseract-OCR binary installed separately:
+#   https://github.com/UB-Mannheim/tesseract/wiki
+#   Default path expected: C:\Program Files\Tesseract-OCR\tesseract.exe
+
+# ── Windows input / mouse movement ──────────────────────────────
+pywin32>=306
+
+# ── Keyboard fallback (if not using interception driver) ────────
+keyboard>=0.13.5
+
+# ── Mouse fallback ───────────────────────────────────────────────
+pyautogui>=0.9.54
+
+# ── Hardware-level input (optional but recommended) ──────────────
+# interception-python requires the Interception kernel driver.
+# Install driver first: https://github.com/oblitum/Interception
+# Then:  pip install interception-python
+# Run the app as Administrator for driver access.
+interception-python>=0.1.5

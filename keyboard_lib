@@ -1,0 +1,91 @@
+Here is the exhaustive, complete list of every single key name recognized by the Python keyboard library.
+## Alphanumeric & Symbols
+
+* a through z: Lowercase letters (always use lowercase; capitalization is handled via shift).
+* 0 through 9: Main keyboard row numbers.
+* space: Spacebar.
+* -: Hyphen / Minus.
+* =: Equals sign.
+* [: Left square bracket.
+* ]: Right square bracket.
+* ;: Semicolon.
+* ': Apostrophe / Single quote.
+* ,: Comma.
+* .: Period / Full stop.
+* /: Forward slash.
+* \: Backslash.
+* `: Backtick / Grave accent.
+
+## Modifiers & System Controls
+
+* alt or left alt: Left Alt key.
+* right alt: Right Alt key (AltGr).
+* ctrl or left ctrl: Left Control key.
+* right ctrl: Right Control key.
+* shift or left shift: Left Shift key.
+* right shift: Right Shift key.
+* windows or cmd: Windows key / Command key.
+* right windows or right cmd: Right-side OS key.
+* menu: Context menu application key (next to right Ctrl).
+* caps lock: Caps Lock toggle.
+* num lock: Num Lock toggle.
+* scroll lock: Scroll Lock toggle.
+
+## Editing & Navigation
+
+* enter or return: Main Enter key.
+* tab: Tabulation key.
+* backspace: Backspace key.
+* esc or escape: Escape key.
+* up: Up arrow.
+* down: Down arrow.
+* left: Left arrow.
+* right: Right arrow.
+* page up: Page Up.
+* page down: Page Down.
+* home: Home key.
+* end: End key.
+* insert: Insert key.
+* delete: Delete key.
+
+## Function Keys
+
+* f1 through f24: All twenty-four possible system function keys.
+
+## Dedicated Numeric Keypad (Numpad)
+
+* num 0 through num 9: Numpad numbers.
+* num decimal or num .: Numpad period.
+* num enter: Numpad Enter key.
+* num add or num +: Numpad plus.
+* num subtract or num -: Numpad minus.
+* num multiply or num *: Numpad asterisk.
+* num divide or num /: Numpad slash.
+* clear: Dedicated Numpad clear key (on some layouts).
+
+## Audio & Multimedia Buttons
+
+* play/pause media: Play or pause media playback.
+* stop media: Stop media playback.
+* next track: Skip to the next track.
+* previous track: Rewind to the previous track.
+* volume up: Turn system volume up.
+* volume down: Turn system volume down.
+* volume mute or mute: Mute system audio.
+
+## Miscellaneous Diagnostic Keys
+
+* print screen or prtscn: Print Screen key.
+* pause or break: Pause/Break key.
+* help: Help key (found on select keyboards).
+* sleep: System sleep key.
+
+------------------------------
+## How to use these names in code
+You can instantly use any name from this list inside your automation functions:
+
+import keyboard
+# Press a shortcut combination
+keyboard.press_and_release('ctrl+shift+esc')
+# Block a specific key from functioning
+keyboard.block_key('num 5')
